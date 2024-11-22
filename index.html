@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scioperista</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #e63946;
+            text-align: center;
+        }
+        .message {
+            font-size: 1.2rem;
+            color: #333333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .strike {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .strike p {
+            margin: 5px 0;
+        }
+        .strike strong {
+            color: #e63946;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scioperista</h1>
+        <div class="message" id="message">Caricamento delle informazioni...</div>
+        <div id="strikes"></div>
+    </div>
+
+    <script>
+        // Funzione per recuperare e filtrare i dati RSS
+        async function fetchRSS() {
+            const proxy = 'https://api.allorigins.win/get?url=';
+            const feedURL = 'http://fetchrss.com/rss/6740f993e674cd72eb041a226740fd25fe1f7ad9ac01f365.xml'; // URL del feed RSS
+
+            try {
+                const response = await fetch(proxy + encodeURIComponent(feedURL));
+                const data = await response.json();
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(data.contents, "application/xml");
+                displayStrikes(xml);
+            } catch (error) {
+                console.error('Errore nel recupero del feed RSS:', error);
+                document.getElementById('message').innerText = 'Errore nel caricamento delle notizie.';
+            }
+        }
+
+        // Funzione per filtrare e visualizzare le notizie sugli scioperi
+        function displayStrikes(xml) {
+            const items = xml.querySelectorAll('item');
+            const strikesDiv = document.getElementById('strikes');
+            let hasStrikes = false;
+
+            strikesDiv.innerHTML = ''; // Resetta il contenuto precedente
+
+            items.forEach(item => {
+                const title = item.querySelector('title')?.textContent || 'Nessun titolo';
+                const description = item.querySelector('description')?.textContent || 'Nessuna descrizione';
+
+                // Verifica se "sciopero" è presente nel titolo o nella descrizione
+                if (title.toLowerCase().includes('sciopero') || description.toLowerCase().includes('sciopero')) {
+                    hasStrikes = true;
+
+                    // Estrai l'orario dalla descrizione (metodo per avere sempre in minuscolo)
+                    let timeMatches = description.match(/dalle ore\s+\d{1,2}\.\d{2}\s+alle ore\s+\d{1,2}\.\d{2}/gi) || [];
+
+                    // Verifica se c'è una seconda occorrenza di "dalle ore" e "a fine servizio"
+                    const secondTimeMatch = description.match(/dalle ore\s+\d{1,2}\.\d{2}.*?a fine servizio/i);
+                    if (secondTimeMatch) {
+                        timeMatches.push(secondTimeMatch[0].trim());
+                    }
+
+                    // Trasforma l'orario in minuscolo
+                    timeMatches = timeMatches.map(time => time.toLowerCase());
+
+                    // Estrai la data dal titolo
+                    const dateMatch = title.match(/(lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica)\s+\d{1,2}\s+(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i);
+                    const date = dateMatch ? capitalize(dateMatch[0]) : 'Non specificata';
+
+                    // Aggiungi i dettagli allo schermo
+                    strikesDiv.innerHTML += `
+                        <div class="strike">
+                            <p><strong>Azienda:</strong> Tper</p>
+                            <p><strong>Data:</strong> ${date}</p>
+                            <p><strong>Orario:</strong> ${timeMatches.join(' e ')}</p>
+                        </div>
+                    `;
+                }
+            });
+
+            // Se non ci sono scioperi
+            const messageDiv = document.getElementById('message');
+            if (hasStrikes) {
+                messageDiv.innerText = 'Ecco le informazioni sugli scioperi di oggi:';
+            } else {
+                messageDiv.innerText = 'Oggi si viaggia con la fortuna! Nessuna informazione sugli scioperi.';
+            }
+        }
+
+        // Funzione per capitalizzare ogni parola
+        function capitalize(text) {
+            return text.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+        }
+
+        // Avvia il recupero del feed RSS
+        fetchRSS();
+    </script>
+</body>
+</html>
