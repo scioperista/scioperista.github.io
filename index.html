@@ -48,17 +48,72 @@
         .strike strong {
             color: #e63946;
         }
+        #languageToggle {
+            margin-top: 20px;
+            display: block;
+            padding: 10px 15px;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #e63946;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #languageToggle:hover {
+            background-color: #d62828;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Scioperista</h1>
+        <h1 id="title">Scioperista</h1>
         <div class="message" id="message">Caricamento delle informazioni...</div>
         <div id="strikes"></div>
+        <button id="languageToggle">ENG</button>
     </div>
 
     <script>
-        // Funzione per recuperare e filtrare i dati RSS
+        const phrases = {
+            it: {
+                dalleOre: "dalle ore",
+                alleOre: "alle ore",
+                aFineServizio: "a fine servizio",
+                noStrikes: "Oggi si viaggia con la fortuna! Nessuna informazione sugli scioperi.",
+                loading: "Caricamento delle informazioni...",
+                strikesFound: "Ecco le informazioni sugli scioperi di oggi:",
+                company: "Azienda",
+                date: "Data",
+                time: "Orario",
+                engButton: "ENG",
+                itaButton: "ITA"
+            },
+            en: {
+                dalleOre: "from",
+                alleOre: "to",
+                aFineServizio: "until the end of service",
+                noStrikes: "You're lucky today! No strike information available.",
+                loading: "Loading information...",
+                strikesFound: "Here is today's strike information:",
+                company: "Company",
+                date: "Date",
+                time: "Time",
+                engButton: "ITA",
+                itaButton: "ENG"
+            }
+        };
+
+        const daysTranslation = {
+            it: ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"],
+            en: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        };
+
+        const monthsTranslation = {
+            it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
+            en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        };
+
+        let currentLanguage = "it";
+
         async function fetchRSS() {
             const proxy = 'https://api.allorigins.win/get?url=';
             const feedURL = 'http://fetchrss.com/rss/6740f993e674cd72eb041a226740fd25fe1f7ad9ac01f365.xml'; // URL del feed RSS
@@ -71,11 +126,18 @@
                 displayStrikes(xml);
             } catch (error) {
                 console.error('Errore nel recupero del feed RSS:', error);
-                document.getElementById('message').innerText = 'Errore nel caricamento delle notizie.';
+                document.getElementById('message').innerText = phrases[currentLanguage].noStrikes;
             }
         }
 
-        // Funzione per filtrare e visualizzare le notizie sugli scioperi
+        function translateDate(dateString) {
+            const days = daysTranslation[currentLanguage];
+            const months = monthsTranslation[currentLanguage];
+            return dateString
+                .replace(/(lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica)/i, match => days[daysTranslation.it.indexOf(match.toLowerCase())])
+                .replace(/(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i, match => months[monthsTranslation.it.indexOf(match.toLowerCase())]);
+        }
+
         function displayStrikes(xml) {
             const items = xml.querySelectorAll('item');
             const strikesDiv = document.getElementById('strikes');
@@ -91,48 +153,43 @@
                 if (title.toLowerCase().includes('sciopero') || description.toLowerCase().includes('sciopero')) {
                     hasStrikes = true;
 
-                    // Estrai l'orario dalla descrizione (metodo per avere sempre in minuscolo)
-                    let timeMatches = description.match(/dalle ore\s+\d{1,2}\.\d{2}\s+alle ore\s+\d{1,2}\.\d{2}/gi) || [];
-
-                    // Verifica se c'è una seconda occorrenza di "dalle ore" e "a fine servizio"
-                    const secondTimeMatch = description.match(/dalle ore\s+\d{1,2}\.\d{2}.*?a fine servizio/i);
-                    if (secondTimeMatch) {
-                        timeMatches.push(secondTimeMatch[0].trim());
-                    }
-
-                    // Trasforma l'orario in minuscolo
-                    timeMatches = timeMatches.map(time => time.toLowerCase());
+                    // Estrai l'orario dalla descrizione
+                    let timeMatches = description
+                        .toLowerCase()
+                        .replace(/dalle ore/g, phrases[currentLanguage].dalleOre)
+                        .replace(/alle ore/g, phrases[currentLanguage].alleOre)
+                        .replace(/a fine servizio/g, phrases[currentLanguage].aFineServizio)
+                        .match(new RegExp(`${phrases[currentLanguage].dalleOre}\\s+\\d{1,2}\\.\\d{2}\\s+${phrases[currentLanguage].alleOre}\\s+\\d{1,2}\\.\\d{2}|${phrases[currentLanguage].aFineServizio}`, 'gi')) || [];
 
                     // Estrai la data dal titolo
                     const dateMatch = title.match(/(lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica)\s+\d{1,2}\s+(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i);
-                    const date = dateMatch ? capitalize(dateMatch[0]) : 'Non specificata';
+                    const date = dateMatch ? translateDate(dateMatch[0]) : 'Non specificata';
 
                     // Aggiungi i dettagli allo schermo
                     strikesDiv.innerHTML += `
                         <div class="strike">
-                            <p><strong>Azienda:</strong> Tper</p>
-                            <p><strong>Data:</strong> ${date}</p>
-                            <p><strong>Orario:</strong> ${timeMatches.join(' e ')}</p>
+                            <p><strong>${phrases[currentLanguage].company}:</strong> Tper</p>
+                            <p><strong>${phrases[currentLanguage].date}:</strong> ${date}</p>
+                            <p><strong>${phrases[currentLanguage].time}:</strong> ${timeMatches.join(' e ')}</p>
                         </div>
                     `;
                 }
             });
 
-            // Se non ci sono scioperi
             const messageDiv = document.getElementById('message');
             if (hasStrikes) {
-                messageDiv.innerText = 'Ecco le informazioni sugli scioperi di oggi:';
+                messageDiv.innerText = phrases[currentLanguage].strikesFound;
             } else {
-                messageDiv.innerText = 'Oggi si viaggia con la fortuna! Nessuna informazione sugli scioperi.';
+                messageDiv.innerText = phrases[currentLanguage].noStrikes;
             }
         }
 
-        // Funzione per capitalizzare ogni parola
-        function capitalize(text) {
-            return text.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
-        }
+        document.getElementById('languageToggle').addEventListener('click', () => {
+            currentLanguage = currentLanguage === "it" ? "en" : "it";
+            document.getElementById('languageToggle').innerText = phrases[currentLanguage].engButton;
+            fetchRSS();
+        });
 
-        // Avvia il recupero del feed RSS
         fetchRSS();
     </script>
 </body>
