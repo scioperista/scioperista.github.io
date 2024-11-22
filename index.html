@@ -1,196 +1,1018 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scioperista</title>
-    <style>
-        body {
-            font-family: "Arial", sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #ffffff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            padding: 30px;
-            width: 90%;
-            max-width: 600px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #e63946;
-            text-align: center;
-        }
-        .message {
-            font-size: 1.2rem;
-            color: #333333;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .strike {
-            text-align: left;
-            margin-bottom: 20px;
-            font-size: 1rem;
-            background-color: #f9f9f9;
-            padding: 10px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-        .strike p {
-            margin: 5px 0;
-        }
-        .strike strong {
-            color: #e63946;
-        }
-        #languageToggle {
-            margin-top: 20px;
-            display: block;
-            padding: 10px 15px;
-            font-size: 1rem;
-            color: #ffffff;
-            background-color: #e63946;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #languageToggle:hover {
-            background-color: #d62828;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 id="title">Scioperista</h1>
-        <div class="message" id="message">Caricamento delle informazioni...</div>
-        <div id="strikes"></div>
-        <button id="languageToggle">ENG</button>
-    </div>
+<html>
+  <head>
+    <title>Maggie May</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="robots" content="max-image-preview:large"/>
+  <meta name="generator" content="Framer ff86393"/>
+  <meta name="description" content="Made with Framer"/>
+  <meta property="og:title" content="Maggie May"/>
+  <meta property="og:description" content="Made with Framer"/>
+  <link href="https://framerusercontent.com/sites/icons/default-favicon-dark.v1.png" rel="icon" media="(prefers-color-scheme: dark)"/>
+  <style>* { box-sizing: border-box; } body {margin: 0;}.text-content{line-height:20px;}.text-main-content{line-height:30px;font-size:1.2rem;}#iau9{font-family:Arial, Helvetica, sans-serif;background-image:linear-gradient(180deg, rgba(59, 130, 245, 0.11), white 14%);background-position:0px 0px;background-size:100% 100%;background-repeat:repeat;background-attachment:scroll;background-origin:padding-box;color:#475569;}.gjs-grid-column.feature-item{padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;display:flex;flex-direction:column;gap:15px;min-width:30%;}.gjs-grid-column.testimonial-item{padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;display:flex;flex-direction:column;gap:15px;min-width:45%;background-color:rgba(247, 247, 247, 0.23);border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;align-items:flex-start;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgba(0, 0, 0, 0.06);border-right-color:rgba(0, 0, 0, 0.06);border-bottom-color:rgba(0, 0, 0, 0.06);border-left-color:rgba(0, 0, 0, 0.06);}.gjs-button{vertical-align:top;max-width:100%;display:inline-block;text-decoration:none;color:white;padding-right:15px;padding-bottom:10px;padding-left:15px;background-color:rgb(36, 99, 235);border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;padding-top:10px;font-size:1.1rem;text-align:center;}.gjs-text-blue{color:rgb(36, 99, 235);}.gjs-link:hover{color:rgb(36, 99, 235);text-decoration:underline;}.gjs-icon.gjs-feature-icon{padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;background-color:rgb(36, 99, 235);color:white;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom-right-radius:10px;border-bottom-left-radius:10px;}#main, html, body{margin:0;padding:0;box-sizing:border-box;}:root{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}*{box-sizing:border-box;-webkit-font-smoothing:inherit;}h1, h2, h3, h4, h5, h6, p, figure{margin:0;}body, input, textarea, select, button{font-size:12px;font-family:sans-serif;}.__framer-badge{pointer-events:auto;}body{--framer-will-change-override:none
+    ;}[data-framer-component-type]{position:absolute;}[data-framer-component-type=Text]{cursor:inherit;}[data-framer-component-text-autosized] *{white-space:pre;}[data-framer-component-type=Text] > *{text-align:var(--framer-text-alignment, start);}[data-framer-component-type=Text] span span, [data-framer-component-type=Text] p span, [data-framer-component-type=Text] h1 span, [data-framer-component-type=Text] h2 span, [data-framer-component-type=Text] h3 span, [data-framer-component-type=Text] h4 span, [data-framer-component-type=Text] h5 span, [data-framer-component-type=Text] h6 span{display:block;}[data-framer-component-type=Text] span span span, [data-framer-component-type=Text] p span span, [data-framer-component-type=Text] h1 span span, [data-framer-component-type=Text] h2 span span, [data-framer-component-type=Text] h3 span span, [data-framer-component-type=Text] h4 span span, [data-framer-component-type=Text] h5 span span, [data-framer-component-type=Text] h6 span span{display:unset;}[data-framer-component-type=Text] div div span, [data-framer-component-type=Text] a div span, [data-framer-component-type=Text] span span span, [data-framer-component-type=Text] p span span, [data-framer-component-type=Text] h1 span span, [data-framer-component-type=Text] h2 span span, [data-framer-component-type=Text] h3 span span, [data-framer-component-type=Text] h4 span span, [data-framer-component-type=Text] h5 span span, [data-framer-component-type=Text] h6 span span, [data-framer-component-type=Text] a{font-family:var(--font-family);font-style:var(--font-style);font-weight:min(calc(var(--framer-font-weight-increase, 0) + var(--font-weight, 400)), 900);color:var(--text-color);letter-spacing:var(--letter-spacing);font-size:var(--font-size);text-transform:var(--text-transform);text-decoration:var(--text-decoration);line-height:var(--line-height);--font-family:var(--framer-font-family);--font-style:var(--framer-font-style);--font-weight:var(--framer-font-weight);--text-color:var(--framer-text-color);--letter-spacing:var(--framer-letter-spacing);--font-size:var(--framer-font-size);--text-transform:var(--framer-text-transform);--text-decoration:var(--framer-text-decoration);--line-height:var(--framer-line-height)
+    ;}[data-framer-component-type=Text] a, [data-framer-component-type=Text] a div span, [data-framer-component-type=Text] a span span span, [data-framer-component-type=Text] a p span span, [data-framer-component-type=Text] a h1 span span, [data-framer-component-type=Text] a h2 span span, [data-framer-component-type=Text] a h3 span span, [data-framer-component-type=Text] a h4 span span, [data-framer-component-type=Text] a h5 span span, [data-framer-component-type=Text] a h6 span span{--font-family:var(--framer-link-font-family, var(--framer-font-family));--font-style:var(--framer-link-font-style, var(--framer-font-style));--font-weight:var(--framer-link-font-weight, var(--framer-font-weight));--text-color:var(--framer-link-text-color, var(--framer-text-color));--font-size:var(--framer-link-font-size, var(--framer-font-size));--text-transform:var(--framer-link-text-transform, var(--framer-text-transform));--text-decoration:var(--framer-link-text-decoration, var(--framer-text-decoration))
+    ;}[data-framer-component-type=Text] a:hover, [data-framer-component-type=Text] a div span:hover, [data-framer-component-type=Text] a span span span:hover, [data-framer-component-type=Text] a p span span:hover, [data-framer-component-type=Text] a h1 span span:hover, [data-framer-component-type=Text] a h2 span span:hover, [data-framer-component-type=Text] a h3 span span:hover, [data-framer-component-type=Text] a h4 span span:hover, [data-framer-component-type=Text] a h5 span span:hover, [data-framer-component-type=Text] a h6 span span:hover{--font-family:var(--framer-link-hover-font-family, var(--framer-link-font-family, var(--framer-font-family)));--font-style:var(--framer-link-hover-font-style, var(--framer-link-font-style, var(--framer-font-style)));--font-weight:var(--framer-link-hover-font-weight, var(--framer-link-font-weight, var(--framer-font-weight)));--text-color:var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-text-color)));--font-size:var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size)));--text-transform:var(--framer-link-hover-text-transform, var(--framer-link-text-transform, var(--framer-text-transform)));--text-decoration:var(--framer-link-hover-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration)))
+    ;}[data-framer-component-type=Text].isCurrent a, [data-framer-component-type=Text].isCurrent a div span, [data-framer-component-type=Text].isCurrent a span span span, [data-framer-component-type=Text].isCurrent a p span span, [data-framer-component-type=Text].isCurrent a h1 span span, [data-framer-component-type=Text].isCurrent a h2 span span, [data-framer-component-type=Text].isCurrent a h3 span span, [data-framer-component-type=Text].isCurrent a h4 span span, [data-framer-component-type=Text].isCurrent a h5 span span, [data-framer-component-type=Text].isCurrent a h6 span span{--font-family:var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family)));--font-style:var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style)));--font-weight:var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight)));--text-color:var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color)));--font-size:var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size)));--text-transform:var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform)));--text-decoration:var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration)))
+    ;}p.framer-text, div.framer-text, h1.framer-text, h2.framer-text, h3.framer-text, h4.framer-text, h5.framer-text, h6.framer-text, ol.framer-text, ul.framer-text{margin:0;padding:0;}p.framer-text, div.framer-text, h1.framer-text, h2.framer-text, h3.framer-text, h4.framer-text, h5.framer-text, h6.framer-text, li.framer-text, ol.framer-text, ul.framer-text, span.framer-text:not([data-text-fill]){font-family:var(--framer-blockquote-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));font-style:var(--framer-blockquote-font-style, var(--framer-font-style, normal));font-weight:var(--framer-blockquote-font-weight, var(--framer-font-weight, 400));color:var(--framer-blockquote-text-color, var(--framer-text-color, #000));font-size:calc(var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1));letter-spacing:var(--framer-blockquote-letter-spacing, var(--framer-letter-spacing, 0));text-transform:var(--framer-blockquote-text-transform, var(--framer-text-transform, none));text-decoration:var(--framer-blockquote-text-decoration, var(--framer-text-decoration, none));line-height:var(--framer-blockquote-line-height, var(--framer-line-height, 1.2em));text-align:var(--framer-blockquote-text-alignment, var(--framer-text-alignment, start));-webkit-text-stroke-width:var(--framer-text-stroke-width, initial);-webkit-text-stroke-color:var(--framer-text-stroke-color, initial);-moz-font-feature-settings:var(--framer-font-open-type-features, initial);-webkit-font-feature-settings:var(--framer-font-open-type-features, initial);font-feature-settings:var(--framer-font-open-type-features, initial);font-variation-settings:var(--framer-font-variation-axes, normal);text-wrap:var(--framer-text-wrap-override, var(--framer-text-wrap));}.framer-fit-text .framer-text{white-space:nowrap;white-space-collapse:preserve;}strong.framer-text{font-family:var(--framer-blockquote-font-family-bold, var(--framer-font-family-bold));font-style:var(--framer-blockquote-font-style-bold, var(--framer-font-style-bold));font-weight:var(--framer-blockquote-font-weight-bold, var(--framer-font-weight-bold, bolder));font-variation-settings:var(--framer-blockquote-font-variation-axes-bold, var(--framer-font-variation-axes-bold));}em.framer-text{font-family:var(--framer-blockquote-font-family-italic, var(--framer-font-family-italic));font-style:var(--framer-blockquote-font-style-italic, var(--framer-font-style-italic, italic));font-weight:var(--framer-blockquote-font-weight-italic, var(--framer-font-weight-italic));font-variation-settings:var(--framer-blockquote-font-variation-axes-italic, var(--framer-font-variation-axes-italic));}em.framer-text > strong.framer-text{font-family:var(--framer-blockquote-font-family-bold-italic, var(--framer-font-family-bold-italic));font-style:var(--framer-blockquote-font-style-bold-italic, var(--framer-font-style-bold-italic, italic));font-weight:var(--framer-blockquote-font-weight-bold-italic, var(--framer-font-weight-bold-italic, bolder));font-variation-settings:var(--framer-blockquote-font-variation-axes-bold-italic, var(--framer-font-variation-axes-bold-italic));}p.framer-text:not(:first-child), div.framer-text:not(:first-child), h1.framer-text:not(:first-child), h2.framer-text:not(:first-child), h3.framer-text:not(:first-child), h4.framer-text:not(:first-child), h5.framer-text:not(:first-child), h6.framer-text:not(:first-child), ol.framer-text:not(:first-child), ul.framer-text:not(:first-child), blockquote.framer-text:not(:first-child), .framer-image.framer-text:not(:first-child){margin-top:var(--framer-blockquote-paragraph-spacing, var(--framer-paragraph-spacing, 0));}li.framer-text > ul.framer-text:nth-child(2), li.framer-text > ol.framer-text:nth-child(2){margin-top:0;}.framer-text[data-text-fill]{display:inline-block;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;padding:max(0em, calc(calc(1.3em - var(--framer-blockquote-line-height, var(--framer-line-height, 1.3em))) / 2));margin:min(0em, calc(calc(1.3em - var(--framer-blockquote-line-height, var(--framer-line-height, 1.3em))) / -2));}code.framer-text, code.framer-text span.framer-text:not([data-text-fill]){font-family:var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));font-style:var(--framer-blockquote-font-style, var(--framer-code-font-style, var(--framer-font-style, normal)));font-weight:var(--framer-blockquote-font-weight, var(--framer-code-font-weight, var(--framer-font-weight, 400)));color:var(--framer-blockquote-text-color, var(--framer-code-text-color, var(--framer-text-color, #000)));font-size:calc(var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1));letter-spacing:var(--framer-blockquote-letter-spacing, var(--framer-letter-spacing, 0));line-height:var(--framer-blockquote-line-height, var(--framer-line-height, 1.2em));}blockquote.framer-text{margin-block-start:initial;margin-block-end:initial;margin-inline-start:initial;margin-inline-end:initial;unicode-bidi:initial;}a.framer-text, a.framer-text span.framer-text:not([data-text-fill]), span.framer-text[data-nested-link], span.framer-text[data-nested-link] span.framer-text:not([data-text-fill]){font-family:var(--framer-blockquote-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));font-style:var(--framer-blockquote-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));font-weight:var(--framer-blockquote-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));color:var(--framer-blockquote-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));font-size:calc(var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1));text-transform:var(--framer-blockquote-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));text-decoration:var(--framer-blockquote-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)));cursor:var(--framer-custom-cursors, pointer);}code.framer-text a.framer-text, code.framer-text a.framer-text span.framer-text:not([data-text-fill]), code.framer-text span.framer-text[data-nested-link], code.framer-text span.framer-text[data-nested-link] span.framer-text:not([data-text-fill]){font-family:var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));font-style:var(--framer-blockquote-font-style, var(--framer-code-font-style, var(--framer-font-style, normal)));font-weight:var(--framer-blockquote-font-weight, var(--framer-code-font-weight, var(--framer-font-weight, 400)));color:var(--framer-blockquote-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000))));font-size:calc(var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) * var(--framer-font-size-scale, 1));}a.framer-text:hover, a.framer-text:hover span.framer-text:not([data-text-fill]), span.framer-text[data-nested-link]:hover, span.framer-text[data-nested-link]:hover span.framer-text:not([data-text-fill]){font-family:var(--framer-link-hover-font-family, var(--framer-blockquote-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif))));font-style:var(--framer-link-hover-font-style, var(--framer-blockquote-font-style, var(--framer-link-font-style, var(--framer-font-style, normal))));font-weight:var(--framer-link-hover-font-weight, var(--framer-blockquote-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400))));color:var(--framer-link-hover-text-color, var(--framer-blockquote-text-color, var(--framer-link-text-color, var(--framer-text-color, #000))));font-size:calc(var(--framer-link-hover-font-size, var(--framer-blockquote-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1));text-transform:var(--framer-link-hover-text-transform, var(--framer-blockquote-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none))));text-decoration:var(--framer-link-hover-text-decoration, var(--framer-blockquote-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none))));}code.framer-text a.framer-text:hover, code.framer-text a.framer-text:hover span.framer-text:not([data-text-fill]), code.framer-text span.framer-text[data-nested-link]:hover, code.framer-text span.framer-text[data-nested-link]:hover span.framer-text:not([data-text-fill]){font-family:var(var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));font-style:var(--framer-blockquote-font-style, var(--framer-code-font-style, var(--framer-font-style, normal)));font-weight:var(--framer-blockquote-font-weight, var(--framer-code-font-weight, var(--framer-font-weight, 400)));color:var(--framer-link-hover-text-color, var(--framer-blockquote-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000)))));font-size:calc(var(--framer-link-hover-font-size, var(--framer-blockquote-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)))) * var(--framer-font-size-scale, 1));}a.framer-text[data-framer-page-link-current], a.framer-text[data-framer-page-link-current] span.framer-text:not([data-text-fill]), span.framer-text[data-framer-page-link-current], span.framer-text[data-framer-page-link-current] span.framer-text:not([data-text-fill]){font-family:var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));font-style:var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));font-weight:var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));color:var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));font-size:calc(var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1));text-transform:var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));text-decoration:var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)));}code.framer-text a.framer-text[data-framer-page-link-current], code.framer-text a.framer-text[data-framer-page-link-current] span.framer-text:not([data-text-fill]), code.framer-text span.framer-text[data-framer-page-link-current], code.framer-text span.framer-text[data-framer-page-link-current] span.framer-text:not([data-text-fill]){font-family:var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));font-style:var(--framer-code-font-style, var(--framer-font-style, normal));font-weight:var(--framer-code-font-weight, var(--framer-font-weight, 400));color:var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000))));font-size:calc(var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))) * var(--framer-font-size-scale, 1));}a.framer-text[data-framer-page-link-current]:hover, a.framer-text[data-framer-page-link-current]:hover span.framer-text:not([data-text-fill]), span.framer-text[data-framer-page-link-current]:hover, span.framer-text[data-framer-page-link-current]:hover span.framer-text:not([data-text-fill]){font-family:var(--framer-link-hover-font-family, var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif))));font-style:var(--framer-link-hover-font-style, var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal))));font-weight:var(--framer-link-hover-font-weight, var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400))));color:var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000))));font-size:calc(var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)))) * var(--framer-font-size-scale, 1));text-transform:var(--framer-link-hover-text-transform, var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none))));text-decoration:var(--framer-link-hover-text-decoration, var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none))));}code.framer-text a.framer-text[data-framer-page-link-current]:hover, code.framer-text a.framer-text[data-framer-page-link-current]:hover span.framer-text:not([data-text-fill]), code.framer-text span.framer-text[data-framer-page-link-current]:hover, code.framer-text span.framer-text[data-framer-page-link-current]:hover span.framer-text:not([data-text-fill]){font-family:var(--framer-code-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));font-style:var(--framer-code-font-style, var(--framer-font-style, normal));font-weight:var(--framer-code-font-weight, var(--framer-font-weight, 400));color:var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-code-text-color, var(--framer-text-color, #000)))));font-size:calc(var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)))) * var(--framer-font-size-scale, 1));}.framer-image.framer-text{display:block;max-width:100%;height:auto;}.text-styles-preset-reset.framer-text{--framer-font-family:Inter, Inter Placeholder, sans-serif;--framer-font-style:normal;--framer-font-weight:500;--framer-text-color:#000;--framer-font-size:16px;--framer-letter-spacing:0;--framer-text-transform:none;--framer-text-decoration:none;--framer-line-height:1.2em;--framer-text-alignment:start;--framer-font-open-type-features:normal
+    ;}ol.framer-text{--list-style-type:decimal
+    ;}ul.framer-text, ol.framer-text{display:table;width:100%;}li.framer-text{display:table-row;counter-increment:list-item;list-style:none;}ol.framer-text > li.framer-text:before{display:table-cell;width:2.25ch;box-sizing:border-box;padding-inline-end:.75ch;content:counter(list-item, var(--list-style-type)) ".";white-space:nowrap;}ul.framer-text > li.framer-text:before{display:table-cell;width:2.25ch;box-sizing:border-box;padding-inline-end:.75ch;content:"\2022";}.framer-text-module[style * =aspect-ratio] > :first-child{width:100%;}[data-framer-component-type=DeprecatedRichText]{cursor:inherit;}[data-framer-component-type=DeprecatedRichText] .text-styles-preset-reset{--framer-font-family:Inter, Inter Placeholder, sans-serif;--framer-font-style:normal;--framer-font-weight:500;--framer-text-color:#000;--framer-font-size:16px;--framer-letter-spacing:0;--framer-text-transform:none;--framer-text-decoration:none;--framer-line-height:1.2em;--framer-text-alignment:start;--framer-font-open-type-features:normal;--font-variation-settings:normal
+    ;}[data-framer-component-type=DeprecatedRichText] p, [data-framer-component-type=DeprecatedRichText] div, [data-framer-component-type=DeprecatedRichText] h1, [data-framer-component-type=DeprecatedRichText] h2, [data-framer-component-type=DeprecatedRichText] h3, [data-framer-component-type=DeprecatedRichText] h4, [data-framer-component-type=DeprecatedRichText] h5, [data-framer-component-type=DeprecatedRichText] h6{margin:0;padding:0;}[data-framer-component-type=DeprecatedRichText] p, [data-framer-component-type=DeprecatedRichText] div, [data-framer-component-type=DeprecatedRichText] h1, [data-framer-component-type=DeprecatedRichText] h2, [data-framer-component-type=DeprecatedRichText] h3, [data-framer-component-type=DeprecatedRichText] h4, [data-framer-component-type=DeprecatedRichText] h5, [data-framer-component-type=DeprecatedRichText] h6, [data-framer-component-type=DeprecatedRichText] li, [data-framer-component-type=DeprecatedRichText] ol, [data-framer-component-type=DeprecatedRichText] ul, [data-framer-component-type=DeprecatedRichText] span:not([data-text-fill]){font-family:var(--framer-font-family, Inter, Inter Placeholder, sans-serif);font-style:var(--framer-font-style, normal);font-weight:var(--framer-font-weight, 400);color:var(--framer-text-color, #000);font-size:var(--framer-font-size, 16px);letter-spacing:var(--framer-letter-spacing, 0);text-transform:var(--framer-text-transform, none);text-decoration:var(--framer-text-decoration, none);line-height:var(--framer-line-height, 1.2em);text-align:var(--framer-text-alignment, start);}[data-framer-component-type=DeprecatedRichText] p:not(:first-child), [data-framer-component-type=DeprecatedRichText] div:not(:first-child), [data-framer-component-type=DeprecatedRichText] h1:not(:first-child), [data-framer-component-type=DeprecatedRichText] h2:not(:first-child), [data-framer-component-type=DeprecatedRichText] h3:not(:first-child), [data-framer-component-type=DeprecatedRichText] h4:not(:first-child), [data-framer-component-type=DeprecatedRichText] h5:not(:first-child), [data-framer-component-type=DeprecatedRichText] h6:not(:first-child), [data-framer-component-type=DeprecatedRichText] ol:not(:first-child), [data-framer-component-type=DeprecatedRichText] ul:not(:first-child), [data-framer-component-type=DeprecatedRichText] .framer-image:not(:first-child){margin-top:var(--framer-paragraph-spacing, 0);}[data-framer-component-type=DeprecatedRichText] span[data-text-fill]{display:inline-block;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}[data-framer-component-type=DeprecatedRichText] a, [data-framer-component-type=DeprecatedRichText] a span:not([data-text-fill]){font-family:var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif));font-style:var(--framer-link-font-style, var(--framer-font-style, normal));font-weight:var(--framer-link-font-weight, var(--framer-font-weight, 400));color:var(--framer-link-text-color, var(--framer-text-color, #000));font-size:var(--framer-link-font-size, var(--framer-font-size, 16px));text-transform:var(--framer-link-text-transform, var(--framer-text-transform, none));text-decoration:var(--framer-link-text-decoration, var(--framer-text-decoration, none));}[data-framer-component-type=DeprecatedRichText] a:hover, [data-framer-component-type=DeprecatedRichText] a:hover span:not([data-text-fill]){font-family:var(--framer-link-hover-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));font-style:var(--framer-link-hover-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));font-weight:var(--framer-link-hover-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));color:var(--framer-link-hover-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));font-size:var(--framer-link-hover-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)));text-transform:var(--framer-link-hover-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));text-decoration:var(--framer-link-hover-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)));}a[data-framer-page-link-current], a[data-framer-page-link-current] span:not([data-text-fill]):not([data-nested-link]){font-family:var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif)));font-style:var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal)));font-weight:var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400)));color:var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000)));font-size:var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px)));text-transform:var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none)));text-decoration:var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none)));}a[data-framer-page-link-current]:hover, a[data-framer-page-link-current]:hover span:not([data-text-fill]):not([data-nested-link]){font-family:var(--framer-link-hover-font-family, var(--framer-link-current-font-family, var(--framer-link-font-family, var(--framer-font-family, Inter, Inter Placeholder, sans-serif))));font-style:var(--framer-link-hover-font-style, var(--framer-link-current-font-style, var(--framer-link-font-style, var(--framer-font-style, normal))));font-weight:var(--framer-link-hover-font-weight, var(--framer-link-current-font-weight, var(--framer-link-font-weight, var(--framer-font-weight, 400))));color:var(--framer-link-hover-text-color, var(--framer-link-current-text-color, var(--framer-link-text-color, var(--framer-text-color, #000))));font-size:var(--framer-link-hover-font-size, var(--framer-link-current-font-size, var(--framer-link-font-size, var(--framer-font-size, 16px))));text-transform:var(--framer-link-hover-text-transform, var(--framer-link-current-text-transform, var(--framer-link-text-transform, var(--framer-text-transform, none))));text-decoration:var(--framer-link-hover-text-decoration, var(--framer-link-current-text-decoration, var(--framer-link-text-decoration, var(--framer-text-decoration, none))));}[data-framer-component-type=DeprecatedRichText] strong{font-weight:bolder;}[data-framer-component-type=DeprecatedRichText] em{font-style:italic;}[data-framer-component-type=DeprecatedRichText] .framer-image{display:block;max-width:100%;height:auto;}[data-framer-component-type=DeprecatedRichText] ul, [data-framer-component-type=DeprecatedRichText] ol{display:table;width:100%;padding-left:0;margin:0;}[data-framer-component-type=DeprecatedRichText] li{display:table-row;counter-increment:list-item;list-style:none;}[data-framer-component-type=DeprecatedRichText] ol > li:before{display:table-cell;width:2.25ch;box-sizing:border-box;padding-right:.75ch;content:counter(list-item) ".";white-space:nowrap;}[data-framer-component-type=DeprecatedRichText] ul > li:before{display:table-cell;width:2.25ch;box-sizing:border-box;padding-right:.75ch;content:"\2022";}:not([data-framer-generated]) > [data-framer-stack-content-wrapper] > *, :not([data-framer-generated]) > [data-framer-stack-content-wrapper] > [data-framer-component-type], :not([data-framer-generated]) > [data-framer-stack-content-wrapper] > [data-framer-legacy-stack-gap-enabled] > *, :not([data-framer-generated]) > [data-framer-stack-content-wrapper] > [data-framer-legacy-stack-gap-enabled] > [data-framer-component-type]{position:relative;}.flexbox-gap-not-supported [data-framer-legacy-stack-gap-enabled=true] > *, [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false]{margin-top:calc(var(--stack-gap-y) / 2);margin-bottom:calc(var(--stack-gap-y) / 2);margin-right:calc(var(--stack-gap-x) / 2);margin-left:calc(var(--stack-gap-x) / 2);}[data-framer-stack-content-wrapper][data-framer-stack-gap-enabled=true]{row-gap:var(--stack-native-row-gap);column-gap:var(--stack-native-column-gap);}.flexbox-gap-not-supported [data-framer-stack-content-wrapper][data-framer-stack-gap-enabled=true]{row-gap:unset;column-gap:unset;}.flexbox-gap-not-supported [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true] > * :first-child, [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false] > * :first-child, .flexbox-gap-not-supported [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true] > * :last-child, [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false] > * :last-child{margin-top:0;margin-left:0;}.flexbox-gap-not-supported [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true] > * :last-child, [data-framer-stack-direction-reverse=false] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false] > * :last-child, .flexbox-gap-not-supported [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true] > * :first-child, [data-framer-stack-direction-reverse=true] [data-framer-legacy-stack-gap-enabled=true][data-framer-stack-flexbox-gap=false] > * :first-child{margin-right:0;margin-bottom:0;}NavigationContainer [data-framer-component-type=NavigationContainer] > *, [data-framer-component-type=NavigationContainer] > [data-framer-component-type]{position:relative;}[data-framer-component-type=Scroll]::-webkit-scrollbar{display:none;}[data-framer-component-type=ScrollContentWrapper] > *{position:relative;}[data-framer-component-type=NativeScroll]{-webkit-overflow-scrolling:touch;}[data-framer-component-type=NativeScroll] > *{position:relative;}[data-framer-component-type=NativeScroll].direction-both{overflow-x:scroll;overflow-y:scroll;}[data-framer-component-type=NativeScroll].direction-vertical{overflow-x:hidden;overflow-y:scroll;}[data-framer-component-type=NativeScroll].direction-horizontal{overflow-x:scroll;overflow-y:hidden;}[data-framer-component-type=NativeScroll].direction-vertical > *{width:100% !important;}[data-framer-component-type=NativeScroll].direction-horizontal > *{height:100% !important;}[data-framer-component-type=NativeScroll].scrollbar-hidden::-webkit-scrollbar{display:none;}[data-framer-component-type=PageContentWrapper] > *, [data-framer-component-type=PageContentWrapper] > [data-framer-component-type]{position:relative;}[data-framer-component-type=DeviceComponent].no-device > *{width:100% !important;height:100% !important;}[data-is-present=false], [data-is-present=false] *{pointer-events:none !important;}[data-framer-cursor=pointer]{cursor:pointer;}[data-framer-cursor=grab]{cursor:grab;}[data-framer-cursor=grab]:active{cursor:grabbing;}[data-framer-component-type=Frame] *, [data-framer-component-type=Stack] *{pointer-events:auto;}[data-framer-generated] *{pointer-events:unset;}.svgContainer svg{display:block;}[data-reset=button]{border-width:0;padding:0;background:none;}[data-hide-scrollbars=true]::-webkit-scrollbar{width:0px;height:0px;}[data-hide-scrollbars=true]::-webkit-scrollbar-thumb{background:transparent;}.framer-cursor-none, .framer-cursor-none *{cursor:none !important;}.framer-pointer-events-none, .framer-pointer-events-none *{pointer-events:none !important;}.framer-body-hA8oY_9Vd-framer-BHaLj{background:hsl(0, 0%, 100%);}.framer-BHaLj.framer-q88x5c, .framer-BHaLj .framer-q88x5c{display:block;}.framer-BHaLj.framer-15kb6vz{align-content:center;align-items:center;background-color:#fff;display:flex;flex-direction:column;flex-wrap:nowrap;gap:0px;height:831px;justify-content:center;overflow:hidden;padding:20px;position:relative;width:1200px;}.framer-BHaLj .framer-1ca28wi{background-color:#fff;flex:none;height:147px;overflow:hidden;position:relative;width:323px;}.framer-BHaLj .framer-1ms6zi2{bottom:0;flex:none;left:0;position:absolute;top:0;width:318px;}.framer-BHaLj .framer-rb3m1i{align-content:center;align-items:center;background-color:#fff;border-radius:12px;box-shadow:0 .8398022765904898px 1.1757231872266858px -.125px #00000005, 0 1.9904796838090988px 2.7866715573327383px -.25px #00000006, 0 3.6308406896569063px 5.083176965519669px -.375px #00000006, 0 6.036265357761295px 8.450771500865812px -.5px #00000007, 0 9.748076360978303px 13.647306905369623px -.625px #00000008, 0 15.956633803711155px 22.339287325195617px -.75px #0000000a, 0 27.476245881684008px 38.46674423435761px -.875px #0000000e, 0 50px 70px -1px #00000014;display:flex;flex:none;flex-direction:column;flex-wrap:nowrap;gap:0px;height:min-content;justify-content:center;max-height:700px;max-width:700px;overflow:hidden;padding:0;position:relative;width:100%;will-change:var(--framer-will-change-override, transform);}.framer-BHaLj .framer-c3oz98{align-content:flex-start;align-items:flex-start;background-color:#ffffff1a;display:flex;flex:none;flex-direction:column;flex-wrap:nowrap;gap:30px;height:min-content;justify-content:center;overflow:visible;padding:4px 50px;position:relative;width:100%;}.framer-BHaLj .framer-1ocppea{align-content:flex-start;align-items:flex-start;display:flex;flex:none;flex-direction:column;flex-wrap:nowrap;gap:20px;height:265px;justify-content:flex-start;overflow:visible;padding:0;position:relative;width:100%;}.framer-BHaLj .framer-rpc7nr-container{flex:1 0 0px;height:1px;position:relative;width:100%;}.ssr-variant{display:contents;}#iu1p2{min-height:100vh;width:auto;}#ij9te{opacity:0.001;will-change:transform;transform:translateY(150px);}#i6gp2{position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0;}#i9egj{display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:contain;}#ibkxq{opacity:0;transform:perspective(1200px) scale(0.6) rotateX(20deg);}#iyubf{width:100%;height:100%;border:none;}#svg-templates{position:absolute;overflow:hidden;bottom:0;left:0;width:0;height:0;z-index:0;contain:strict;}@media (min-width: 810px) and(max-width: 1199px){.hidden-jefiul{display:none !important;}.framer-body-hA8oY_9Vd-framer-BHaLj{background:hsl(0, 0%, 100%);}.framer-BHaLj.framer-15kb6vz{height:714px;width:810px;}}@media (min-width: 1200px){.hidden-15kb6vz{display:none !important;}}@media (max-width: 809px){.hidden-uyibg{display:none !important;}.framer-body-hA8oY_9Vd-framer-BHaLj{background:hsl(0, 0%, 100%);}.framer-BHaLj.framer-15kb6vz{height:637px;padding:0;width:390px;}.framer-BHaLj .framer-1ms6zi2{height:108px;top:unset;}.framer-BHaLj .framer-rb3m1i{border-bottom-left-radius:unset;border-bottom-right-radius:unset;border-top-left-radius:unset;border-top-right-radius:unset;flex:1 0 0px;height:1px;justify-content:flex-start;max-height:unset;}.framer-BHaLj .framer-c3oz98{padding:13px 50px;}.framer-BHaLj .framer-1ocppea{height:324px;}.framer-BHaLj .framer-rpc7nr-container{flex:none;height:unset;inset:0;position:absolute;width:unset;z-index:1;}}</style>
+  <!-- Start of headStart -->
+<!-- End of headStart -->
+<meta name="framer-search-index" content="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/searchIndex-fuum2_i6g4nV.json"/>
+<link rel="apple-touch-icon" href="https://framerusercontent.com/sites/icons/default-touch-icon.v3.png"/>
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Maggie May"/>
+<meta name="twitter:description" content="Made with Framer"/>
+<link rel="canonical" href="https://expansive-job-982382.framer.app/"/>
+<meta property="og:url" content="https://expansive-job-982382.framer.app/"/>
+<link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/chunk-K26I3OQE.mjs"/>
+<link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/chunk-JR5VT52U.mjs"/>
+<link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/chunk-RIUMFBNJ.mjs"/>
+<link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/LYJcn-IGSoLT1k6zIvfrOtnV4TxQ7_DeCmh90v5B1zY.4V22E3A5.mjs"/>
+<link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/chunk-PPTDLPHH.mjs"/>
+<link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/chunk-42U43NKG.mjs"/>
+<link rel="modulepreload" fetchpriority="low" href="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/script_main.ZFDGE7R4.mjs"/>
+<!-- Start of headEnd -->
+<!-- End of headEnd -->
+  </head>
+  <body id="iau9" class="framer-body-hA8oY_9Vd-framer-BHaLj"><script async src="https://events.framer.com/script" data-fid="f6a9559bd85a886faf025087eb739453f72bf41d900221765710a9b55f80930c"></script><!-- Start of bodyStart --><!-- End of bodyStart --><div id="main" data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;hA8oY_9Vd&quot;,&quot;localeId&quot;:&quot;default&quot;,&quot;breakpoints&quot;:[{&quot;hash&quot;:&quot;15kb6vz&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1200px)&quot;},{&quot;hash&quot;:&quot;jefiul&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 810px) and (max-width: 1199px)&quot;},{&quot;hash&quot;:&quot;uyibg&quot;,&quot;mediaQuery&quot;:&quot;(max-width: 809px)&quot;}]}" data-framer-ssr-released-at="2024-11-18T17:03:50.809Z" data-framer-page-optimized-at="2024-11-22T23:50:40.268Z"><!--$--><div class="framer-BHaLj framer-15kb6vz" id="iu1p2"><div data-framer-appear-id="1ca28wi" class="framer-1ca28wi" id="ij9te"><div class="framer-1ms6zi2"><div data-framer-background-image-wrapper="true" id="i6gp2"><img decoding="async" sizes="(min-width: 1200px) 318px, (min-width: 810px) and (max-width: 1199px) 318px, (max-width: 809px) 318px" srcset="https://framerusercontent.com/images/UxuZdnNvHEhzONQAnA9w86Yk0A.png?scale-down-to=512 512w,https://framerusercontent.com/images/UxuZdnNvHEhzONQAnA9w86Yk0A.png 646w" src="https://framerusercontent.com/images/UxuZdnNvHEhzONQAnA9w86Yk0A.png" alt="" data-framer-original-sizes="318px" id="i9egj"/></div></div></div><div class="framer-rb3m1i" id="ibkxq"><div class="framer-c3oz98"><div class="framer-1ocppea"><div class="framer-rpc7nr-container"><iframe frameborder="0" srcdoc="
+                            <html>
+                                <head>
+                                    <style>
+                                        html, body {
+                                            margin: 0;
+                                            padding: 0;
+                                        }
 
-    <script>
-        const phrases = {
-            it: {
-                dalleOre: "dalle ore",
-                alleOre: "alle ore",
-                aFineServizio: "a fine servizio",
-                noStrikes: "Oggi si viaggia con la fortuna! Nessuna informazione sugli scioperi.",
-                loading: "Caricamento delle informazioni...",
-                strikesFound: "Ecco le informazioni sugli scioperi di oggi:",
-                company: "Azienda",
-                date: "Data",
-                time: "Orario",
-                engButton: "ENG",
-                itaButton: "ITA"
-            },
-            en: {
-                dalleOre: "from",
-                alleOre: "to",
-                aFineServizio: "until the end of service",
-                noStrikes: "You're lucky today! No strike information available.",
-                loading: "Loading information...",
-                strikesFound: "Here is today's strike information:",
-                company: "Company",
-                date: "Date",
-                time: "Time",
-                engButton: "ITA",
-                itaButton: "ENG"
+                                        body {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            min-height: 100vh;
+                                        }
+
+                                        :root {
+                                            -webkit-font-smoothing: antialiased;
+                                            -moz-osx-font-smoothing: grayscale;
+                                        }
+
+                                        * {
+                                            box-sizing: border-box;
+                                            -webkit-font-smoothing: inherit;
+                                        }
+
+                                        h1, h2, h3, h4, h5, h6, p, figure {
+                                            margin: 0;
+                                        }
+
+                                        body, input, textarea, select, button {
+                                            font-size: 12px;
+                                            font-family: sans-serif;
+                                        }
+                                    </style>
+                                </head>
+                                <body>
+                                    <!DOCTYPE html>
+                            <html lang=&quot;it&quot;>
+                            <head>
+                                <meta charset=&quot;UTF-8&quot;>
+                                <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+                                <title>Scioperista</title>
+                                <style>
+                                    body {
+                                        font-family: &quot;Arial&quot;, sans-serif;
+                                        background-color: #ffffff; /* Sfondo bianco */
+                                        margin: 0;
+                                        padding: 0;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 100vh; /* Altezza intera dello schermo */
+                                        width: 100vw; /* Larghezza intera dello schermo */
+                                        box-sizing: border-box;
+                                    }
+                                    .container {
+                                        background-color: #ffffff; /* Anche il contenitore ha sfondo bianco */
+                                        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                                        border-radius: 10px;
+                                        padding: 30px;
+                                        width: 100%;
+                                        max-width: 800px; /* Larghezza massima per il contenuto */
+                                        box-sizing: border-box;
+                                    }
+                                    h1 {
+                                        font-size: 2.5rem;
+                                        color: #e63946;
+                                        text-align: center;
+                                    }
+                                    .message {
+                                        font-size: 1.2rem;
+                                        color: #333333;
+                                        margin-bottom: 20px;
+                                        text-align: center;
+                                    }
+                                    .strike {
+                                        text-align: left;
+                                        margin-bottom: 20px;
+                                        font-size: 1rem;
+                                        background-color: #f9f9f9;
+                                        padding: 10px 15px;
+                                        border: 1px solid #ddd;
+                                        border-radius: 8px;
+                                    }
+                                    .strike p {
+                                        margin: 5px 0;
+                                    }
+                                    .strike strong {
+                                        color: #e63946;
+                                    }
+                                    #languageToggle {
+                                        margin-top: 20px;
+                                        display: block;
+                                        padding: 10px 15px;
+                                        font-size: 1rem;
+                                        color: #ffffff;
+                                        background-color: #e63946;
+                                        border: none;
+                                        border-radius: 5px;
+                                        cursor: pointer;
+                                    }
+                                    #languageToggle:hover {
+                                        background-color: #d62828;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <div class=&quot;container&quot;>
+                                    <h1 id=&quot;title&quot;>Scioperista</h1>
+                                    <div class=&quot;message&quot; id=&quot;message&quot;>Caricamento delle informazioni...</div>
+                                    <div id=&quot;strikes&quot;></div>
+                                    <button id=&quot;languageToggle&quot;>ENG</button>
+                                </div>
+
+                                <script>
+                                    const phrases = {
+                                        it: {
+                                            dalleOre: &quot;dalle ore&quot;,
+                                            alleOre: &quot;alle ore&quot;,
+                                            aFineServizio: &quot;a fine servizio&quot;,
+                                            noStrikes: &quot;Oggi si viaggia con la fortuna! Nessuna informazione sugli scioperi.&quot;,
+                                            loading: &quot;Caricamento delle informazioni...&quot;,
+                                            strikesFound: &quot;Ecco le informazioni sugli scioperi di oggi:&quot;,
+                                            company: &quot;Azienda&quot;,
+                                            date: &quot;Data&quot;,
+                                            time: &quot;Orario&quot;,
+                                            engButton: &quot;ENG&quot;,
+                                            itaButton: &quot;ITA&quot;
+                                        },
+                                        en: {
+                                            dalleOre: &quot;from&quot;,
+                                            alleOre: &quot;to&quot;,
+                                            aFineServizio: &quot;until the end of service&quot;,
+                                            noStrikes: &quot;You're lucky today! No strike information available.&quot;,
+                                            loading: &quot;Loading information...&quot;,
+                                            strikesFound: &quot;Here is today's strike information:&quot;,
+                                            company: &quot;Company&quot;,
+                                            date: &quot;Date&quot;,
+                                            time: &quot;Time&quot;,
+                                            engButton: &quot;ITA&quot;,
+                                            itaButton: &quot;ENG&quot;
+                                        }
+                                    };
+
+                                    const daysTranslation = {
+                                        it: [&quot;lunedì&quot;, &quot;martedì&quot;, &quot;mercoledì&quot;, &quot;giovedì&quot;, &quot;venerdì&quot;, &quot;sabato&quot;, &quot;domenica&quot;],
+                                        en: [&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;]
+                                    };
+
+                                    const monthsTranslation = {
+                                        it: [&quot;gennaio&quot;, &quot;febbraio&quot;, &quot;marzo&quot;, &quot;aprile&quot;, &quot;maggio&quot;, &quot;giugno&quot;, &quot;luglio&quot;, &quot;agosto&quot;, &quot;settembre&quot;, &quot;ottobre&quot;, &quot;novembre&quot;, &quot;dicembre&quot;],
+                                        en: [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;]
+                                    };
+
+                                    let currentLanguage = &quot;it&quot;;
+
+                                    async function fetchRSS() {
+                                        const proxy = 'https://api.allorigins.win/get?url=';
+                                        const feedURL = 'http://fetchrss.com/rss/6740f993e674cd72eb041a226740fd25fe1f7ad9ac01f365.xml'; // URL del feed RSS
+
+                                        try {
+                                            const response = await fetch(proxy + encodeURIComponent(feedURL));
+                                            const data = await response.json();
+                                            const parser = new DOMParser();
+                                            const xml = parser.parseFromString(data.contents, &quot;application/xml&quot;);
+                                            displayStrikes(xml);
+                                        } catch (error) {
+                                            console.error('Errore nel recupero del feed RSS:', error);
+                                            document.getElementById('message').innerText = phrases[currentLanguage].noStrikes;
+                                        }
+                                    }
+
+                                    function translateDate(dateString) {
+                                        const days = daysTranslation[currentLanguage];
+                                        const months = monthsTranslation[currentLanguage];
+                                        return dateString
+                                            .replace(/(lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica)/i, match => days[daysTranslation.it.indexOf(match.toLowerCase())])
+                                            .replace(/(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i, match => months[monthsTranslation.it.indexOf(match.toLowerCase())]);
+                                    }
+
+                                    function displayStrikes(xml) {
+                                        const items = xml.querySelectorAll('item');
+                                        const strikesDiv = document.getElementById('strikes');
+                                        let hasStrikes = false;
+
+                                        strikesDiv.innerHTML = ''; // Resetta il contenuto precedente
+
+                                        items.forEach(item => {
+                                            const title = item.querySelector('title')?.textContent || 'Nessun titolo';
+                                            const description = item.querySelector('description')?.textContent || 'Nessuna descrizione';
+
+                                            // Verifica se &quot;sciopero&quot; è presente nel titolo o nella descrizione
+                                            if (title.toLowerCase().includes('sciopero') || description.toLowerCase().includes('sciopero')) {
+                                                hasStrikes = true;
+
+                                                // Estrai l'orario dalla descrizione
+                                                let timeMatches = description
+                                                    .toLowerCase()
+                                                    .replace(/dalle ore/g, phrases[currentLanguage].dalleOre)
+                                                    .replace(/alle ore/g, phrases[currentLanguage].alleOre)
+                                                    .replace(/a fine servizio/g, phrases[currentLanguage].aFineServizio)
+                                                    .match(new RegExp(`${phrases[currentLanguage].dalleOre}\\s+\\d{1,2}\\.\\d{2}\\s+${phrases[currentLanguage].alleOre}\\s+\\d{1,2}\\.\\d{2}|${phrases[currentLanguage].aFineServizio}`, 'gi')) || [];
+
+                                                // Estrai la data dal titolo
+                                                const dateMatch = title.match(/(lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica)\s+\d{1,2}\s+(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i);
+                                                const date = dateMatch ? translateDate(dateMatch[0]) : 'Non specificata';
+
+                                                // Aggiungi i dettagli allo schermo
+                                                strikesDiv.innerHTML += `
+                                                    <div class=&quot;strike&quot;>
+                                                        <p><strong>${phrases[currentLanguage].company}:</strong> Tper</p>
+                                                        <p><strong>${phrases[currentLanguage].date}:</strong> ${date}</p>
+                                                        <p><strong>${phrases[currentLanguage].time}:</strong> ${timeMatches.join(' e ')}</p>
+                                                    </div>
+                                                `;
+                                            }
+                                        });
+
+                                        const messageDiv = document.getElementById('message');
+                                        if (hasStrikes) {
+                                            messageDiv.innerText = phrases[currentLanguage].strikesFound;
+                                        } else {
+                                            messageDiv.innerText = phrases[currentLanguage].noStrikes;
+                                        }
+                                    }
+
+                                    document.getElementById('languageToggle').addEventListener('click', () => {
+                                        currentLanguage = currentLanguage === &quot;it&quot; ? &quot;en&quot; : &quot;it&quot;;
+                                        document.getElementById('languageToggle').innerText = phrases[currentLanguage].engButton;
+                                        fetchRSS();
+                                    });
+
+                                    fetchRSS();
+                                </script>
+                            </body>
+                            </html>
+                                    <script type=&quot;module&quot;>
+                                        let height = 0
+
+                                        function sendEmbedHeight() {
+                                            window.parent.postMessage({
+                                                embedHeight: height
+                                            }, &quot;*&quot;)
+                                        }
+
+                                        const observer = new ResizeObserver((entries) => {
+                                            if (entries.length !== 1) return
+                                            const entry = entries[0]
+                                            if (entry.target !== document.body) return
+
+                                            height = entry.contentRect.height
+                                            sendEmbedHeight()
+                                        })
+
+                                        observer.observe(document.body)
+
+                                        window.addEventListener(&quot;message&quot;, (event) => {
+                                            if (event.source !== window.parent) return
+                                            if (event.data !== &quot;getEmbedHeight&quot;) return
+                                            sendEmbedHeight()
+                                        })
+                                    </script>
+                                <body>
+                            </html>
+                            " id="iyubf"></iframe></div></div></div></div></div><div id="overlay" class="framer-BHaLj"></div><!--/$--></div><script>
+    (() => {
+        function u() {
+            function n(t, e, i) {
+                let r = document.createElement("a");
+                r.href = t,
+                r.target = i,
+                r.rel = e,
+                document.body.appendChild(r),
+                r.click(),
+                r.remove()
             }
-        };
-
-        const daysTranslation = {
-            it: ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"],
-            en: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-        };
-
-        const monthsTranslation = {
-            it: ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
-            en: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-        };
-
-        let currentLanguage = "it";
-
-        async function fetchRSS() {
-            const proxy = 'https://api.allorigins.win/get?url=';
-            const feedURL = 'http://fetchrss.com/rss/6740f993e674cd72eb041a226740fd25fe1f7ad9ac01f365.xml'; // URL del feed RSS
-
-            try {
-                const response = await fetch(proxy + encodeURIComponent(feedURL));
-                const data = await response.json();
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(data.contents, "application/xml");
-                displayStrikes(xml);
-            } catch (error) {
-                console.error('Errore nel recupero del feed RSS:', error);
-                document.getElementById('message').innerText = phrases[currentLanguage].noStrikes;
-            }
-        }
-
-        function translateDate(dateString) {
-            const days = daysTranslation[currentLanguage];
-            const months = monthsTranslation[currentLanguage];
-            return dateString
-                .replace(/(lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica)/i, match => days[daysTranslation.it.indexOf(match.toLowerCase())])
-                .replace(/(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i, match => months[monthsTranslation.it.indexOf(match.toLowerCase())]);
-        }
-
-        function displayStrikes(xml) {
-            const items = xml.querySelectorAll('item');
-            const strikesDiv = document.getElementById('strikes');
-            let hasStrikes = false;
-
-            strikesDiv.innerHTML = ''; // Resetta il contenuto precedente
-
-            items.forEach(item => {
-                const title = item.querySelector('title')?.textContent || 'Nessun titolo';
-                const description = item.querySelector('description')?.textContent || 'Nessuna descrizione';
-
-                // Verifica se "sciopero" è presente nel titolo o nella descrizione
-                if (title.toLowerCase().includes('sciopero') || description.toLowerCase().includes('sciopero')) {
-                    hasStrikes = true;
-
-                    // Estrai l'orario dalla descrizione
-                    let timeMatches = description
-                        .toLowerCase()
-                        .replace(/dalle ore/g, phrases[currentLanguage].dalleOre)
-                        .replace(/alle ore/g, phrases[currentLanguage].alleOre)
-                        .replace(/a fine servizio/g, phrases[currentLanguage].aFineServizio)
-                        .match(new RegExp(`${phrases[currentLanguage].dalleOre}\\s+\\d{1,2}\\.\\d{2}\\s+${phrases[currentLanguage].alleOre}\\s+\\d{1,2}\\.\\d{2}|${phrases[currentLanguage].aFineServizio}`, 'gi')) || [];
-
-                    // Estrai la data dal titolo
-                    const dateMatch = title.match(/(lunedì|martedì|mercoledì|giovedì|venerdì|sabato|domenica)\s+\d{1,2}\s+(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i);
-                    const date = dateMatch ? translateDate(dateMatch[0]) : 'Non specificata';
-
-                    // Aggiungi i dettagli allo schermo
-                    strikesDiv.innerHTML += `
-                        <div class="strike">
-                            <p><strong>${phrases[currentLanguage].company}:</strong> Tper</p>
-                            <p><strong>${phrases[currentLanguage].date}:</strong> ${date}</p>
-                            <p><strong>${phrases[currentLanguage].time}:</strong> ${timeMatches.join(' e ')}</p>
-                        </div>
-                    `;
+            function o(t) {
+                if (this.dataset.hydrated) {
+                    this.removeEventListener("click", o);
+                    return
                 }
-            });
-
-            const messageDiv = document.getElementById('message');
-            if (hasStrikes) {
-                messageDiv.innerText = phrases[currentLanguage].strikesFound;
-            } else {
-                messageDiv.innerText = phrases[currentLanguage].noStrikes;
+                t.preventDefault(),
+                t.stopPropagation();
+                let e = this.getAttribute("href");
+                if (!e)
+                    return;
+                if (/Mac|iPod|iPhone|iPad/u.test(navigator.userAgent) ? t.metaKey : t.ctrlKey)
+                    return n(e, "", "_blank");
+                let r = this.getAttribute("rel") ?? "",
+                    c = this.getAttribute("target") ?? "";
+                n(e, r, c)
+            }
+            function a(t) {
+                if (this.dataset.hydrated) {
+                    this.removeEventListener("auxclick", o);
+                    return
+                }
+                t.preventDefault(),
+                t.stopPropagation();
+                let e = this.getAttribute("href");
+                e && n(e, "", "_blank")
+            }
+            function s(t) {
+                if (this.dataset.hydrated) {
+                    this.removeEventListener("keydown", s);
+                    return
+                }
+                if (t.key !== "Enter")
+                    return;
+                t.preventDefault(),
+                t.stopPropagation();
+                let e = this.getAttribute("href");
+                if (!e)
+                    return;
+                let i = this.getAttribute("rel") ?? "",
+                    r = this.getAttribute("target") ?? "";
+                n(e, i, r)
+            }
+            document.querySelectorAll("[data-nested-link]").forEach(t => {
+                t instanceof HTMLElement && (t.addEventListener("click", o), t.addEventListener("auxclick", a), t.addEventListener("keydown", s))
+            })
+        }
+        return u
+    })()()
+    </script><script>
+    (() => {
+        function i() {
+            for (let e of document.querySelectorAll("[data-framer-original-sizes]")) {
+                let t = e.getAttribute("data-framer-original-sizes");
+                t === "" ? e.removeAttribute("sizes") : e.setAttribute("sizes", t),
+                e.removeAttribute("data-framer-original-sizes")
             }
         }
-
-        document.getElementById('languageToggle').addEventListener('click', () => {
-            currentLanguage = currentLanguage === "it" ? "en" : "it";
-            document.getElementById('languageToggle').innerText = phrases[currentLanguage].engButton;
-            fetchRSS();
+        function a() {
+            window.__framer_onRewriteBreakpoints = i
+        }
+        return a
+    })()()
+    </script><script>
+    "use strict";
+    var animator = (() => {
+        var z = Object.defineProperty;
+        var ve = Object.getOwnPropertyDescriptor;
+        var Oe = Object.getOwnPropertyNames;
+        var Se = Object.prototype.hasOwnProperty;
+        var ke = (e, t) => {
+                for (var n in t)
+                    z(e, n, {
+                        get: t[n],
+                        enumerable: !0
+                    })
+            },
+            Pe = (e, t, n, o) => {
+                if (t && typeof t == "object" || typeof t == "function")
+                    for (let f of Oe(t))
+                        !Se.call(e, f) && f !== n && z(e, f, {
+                            get: () => t[f],
+                            enumerable: !(o = ve(t, f)) || o.enumerable
+                        });
+                return e
+            };
+        var De = e => Pe(z({}, "__esModule", {
+            value: !0
+        }), e);
+        var nt = {};
+        ke(nt, {
+            animateAppearEffects: () => Me,
+            getActiveVariantHash: () => Te,
+            spring: () => P,
+            startOptimizedAppearAnimation: () => N
         });
-
-        fetchRSS();
-    </script>
-</body>
+        var Ie = ["transformPerspective", "x", "y", "z", "translateX", "translateY", "translateZ", "scale", "scaleX", "scaleY", "rotate", "rotateX", "rotateY", "rotateZ", "skew", "skewX", "skewY"],
+            W = new Set(Ie);
+        var S = e => e * 1e3,
+            k = e => e / 1e3;
+        var E = e => e;
+        var H = E;
+        var B = (e, t, n) => n > t ? t : n < e ? e : n;
+        function U(e, t) {
+            return t ? e * (1e3 / t) : 0
+        }
+        var Ke = 5;
+        function Q(e, t, n) {
+            let o = Math.max(t - Ke, 0);
+            return U(n - e(o), t - o)
+        }
+        var L = .001,
+            Ee = .01,
+            J = 10,
+            Ce = .05,
+            Ve = 1;
+        function ee({duration: e=800, bounce: t=.25, velocity: n=0, mass: o=1}) {
+            let f,
+                r;
+            H(e <= S(J), "Spring duration must be 10 seconds or less");
+            let a = 1 - t;
+            a = B(Ce, Ve, a),
+            e = B(Ee, J, k(e)),
+            a < 1 ? (f = s => {
+                let p = s * a,
+                    c = p * e,
+                    u = p - n,
+                    l = C(s, a),
+                    d = Math.exp(-c);
+                return L - u / l * d
+            }, r = s => {
+                let c = s * a * e,
+                    u = c * n + n,
+                    l = Math.pow(a, 2) * Math.pow(s, 2) * e,
+                    d = Math.exp(-c),
+                    g = C(Math.pow(s, 2), a);
+                return (-f(s) + L > 0 ? -1 : 1) * ((u - l) * d) / g
+            }) : (f = s => {
+                let p = Math.exp(-s * e),
+                    c = (s - n) * e + 1;
+                return -L + p * c
+            }, r = s => {
+                let p = Math.exp(-s * e),
+                    c = (n - s) * (e * e);
+                return p * c
+            });
+            let m = 5 / e,
+                i = ze(f, r, m);
+            if (e = S(e), isNaN(i))
+                return {
+                    stiffness: 100,
+                    damping: 10,
+                    duration: e
+                };
+            {
+                let s = Math.pow(i, 2) * o;
+                return {
+                    stiffness: s,
+                    damping: a * 2 * Math.sqrt(o * s),
+                    duration: e
+                }
+            }
+        }
+        var $e = 12;
+        function ze(e, t, n) {
+            let o = n;
+            for (let f = 1; f < $e; f++)
+                o = o - e(o) / t(o);
+            return o
+        }
+        function C(e, t) {
+            return e * Math.sqrt(1 - t * t)
+        }
+        var Be = ["duration", "bounce"],
+            Le = ["stiffness", "damping", "mass"];
+        function te(e, t) {
+            return t.some(n => e[n] !== void 0)
+        }
+        function Re(e) {
+            let t = {
+                velocity: 0,
+                stiffness: 100,
+                damping: 10,
+                mass: 1,
+                isResolvedFromDuration: !1,
+                ...e
+            };
+            if (!te(e, Le) && te(e, Be)) {
+                let n = ee(e);
+                t = {
+                    ...t,
+                    ...n,
+                    mass: 1
+                },
+                t.isResolvedFromDuration = !0
+            }
+            return t
+        }
+        function P({keyframes: e, restDelta: t, restSpeed: n, ...o}) {
+            let f = e[0],
+                r = e[e.length - 1],
+                a = {
+                    done: !1,
+                    value: f
+                },
+                {stiffness: m, damping: i, mass: s, duration: p, velocity: c, isResolvedFromDuration: u} = Re({
+                    ...o,
+                    velocity: -k(o.velocity || 0)
+                }),
+                l = c || 0,
+                d = i / (2 * Math.sqrt(m * s)),
+                g = r - f,
+                y = k(Math.sqrt(m / s)),
+                M = Math.abs(g) < 5;
+            n || (n = M ? .01 : 2),
+            t || (t = M ? .005 : .5);
+            let h;
+            if (d < 1) {
+                let x = C(y, d);
+                h = A => {
+                    let T = Math.exp(-d * y * A);
+                    return r - T * ((l + d * y * g) / x * Math.sin(x * A) + g * Math.cos(x * A))
+                }
+            } else if (d === 1)
+                h = x => r - Math.exp(-y * x) * (g + (l + y * g) * x);
+            else {
+                let x = y * Math.sqrt(d * d - 1);
+                h = A => {
+                    let T = Math.exp(-d * y * A),
+                        K = Math.min(x * A, 300);
+                    return r - T * ((l + d * y * g) * Math.sinh(K) + x * g * Math.cosh(K)) / x
+                }
+            }
+            return {
+                calculatedDuration: u && p || null,
+                next: x => {
+                    let A = h(x);
+                    if (u)
+                        a.done = x >= p;
+                    else {
+                        let T = 0;
+                        d < 1 && (T = x === 0 ? S(l) : Q(h, x, A));
+                        let K = Math.abs(T) <= n,
+                            be = Math.abs(r - A) <= t;
+                        a.done = K && be
+                    }
+                    return a.value = a.done ? r : A, a
+                }
+            }
+        }
+        var ne = e => Array.isArray(e) && typeof e[0] == "number";
+        var oe = (e, t, n) => {
+            let o = t - e;
+            return o === 0 ? 1 : (n - e) / o
+        };
+        var Fe = 10,
+            re = (e, t) => {
+                let n = "",
+                    o = Math.max(Math.round(t / Fe), 2);
+                for (let f = 0; f < o; f++)
+                    n += e(oe(0, o - 1, f)) + ", ";
+                return `linear(${n.substring(0, n.length - 2)})`
+            };
+        function ie(e) {
+            let t;
+            return () => (t === void 0 && (t = e()), t)
+        }
+        var se = {
+            linearEasing: void 0
+        };
+        function ae(e, t) {
+            let n = ie(e);
+            return () => {
+                var o;
+                return (o = se[t]) !== null && o !== void 0 ? o : n()
+            }
+        }
+        var pe = ae(() => {
+            try {
+                document.createElement("div").animate({
+                    opacity: 0
+                }, {
+                    easing: "linear(0, 1)"
+                })
+            } catch {
+                return !1
+            }
+            return !0
+        }, "linearEasing");
+        var D = ([e, t, n, o]) => `cubic-bezier(${e}, ${t}, ${n}, ${o})`,
+            fe = {
+                linear: "linear",
+                ease: "ease",
+                easeIn: "ease-in",
+                easeOut: "ease-out",
+                easeInOut: "ease-in-out",
+                circIn: D([0, .65, .55, 1]),
+                circOut: D([.55, 0, 1, .45]),
+                backIn: D([.31, .01, .66, -.59]),
+                backOut: D([.33, 1.53, .69, .99])
+            };
+        function R(e, t) {
+            if (e)
+                return typeof e == "function" && pe() ? re(e, t) : ne(e) ? D(e) : Array.isArray(e) ? e.map(n => R(n, t) || fe.easeOut) : fe[e]
+        }
+        function F(e, t, n, {delay: o=0, duration: f=300, repeat: r=0, repeatType: a="loop", ease: m, times: i}={}) {
+            let s = {
+                [t]: n
+            };
+            i && (s.offset = i);
+            let p = R(m, f);
+            return Array.isArray(p) && (s.easing = p), e.animate(s, {
+                delay: o,
+                duration: f,
+                easing: Array.isArray(p) ? "linear" : p,
+                fill: "both",
+                iterations: r + 1,
+                direction: a === "reverse" ? "alternate" : "normal"
+            })
+        }
+        var me = e => e.replace(/([a-z])([A-Z])/gu, "$1-$2").toLowerCase();
+        var X = "framerAppearId",
+            ce = "data-" + me(X);
+        function ue(e) {
+            return e.props[ce]
+        }
+        var b = (e, t) => {
+            let n = W.has(t) ? "transform" : t;
+            return `${e}: ${n}`
+        };
+        var w = new Map,
+            v = new Map;
+        function Y(e, t, n) {
+            var o;
+            let f = b(e, t),
+                r = w.get(f);
+            if (!r)
+                return null;
+            let {animation: a, startTime: m} = r;
+            function i() {
+                var s;
+                (s = window.MotionCancelOptimisedAnimation) === null || s === void 0 || s.call(window, e, t, n)
+            }
+            return a.onfinish = i, m === null || !((o = window.MotionHandoffIsComplete) === null || o === void 0) && o.call(window, e) ? (i(), null) : m
+        }
+        var V,
+            O,
+            j = new Set;
+        function Xe() {
+            j.forEach(e => {
+                e.animation.play(),
+                e.animation.startTime = e.startTime
+            }),
+            j.clear()
+        }
+        function N(e, t, n, o, f) {
+            if (window.MotionIsMounted)
+                return;
+            let r = e.dataset[X];
+            if (!r)
+                return;
+            window.MotionHandoffAnimation = Y;
+            let a = b(r, t);
+            O || (O = F(e, t, [n[0], n[0]], {
+                duration: 1e4,
+                ease: "linear"
+            }), w.set(a, {
+                animation: O,
+                startTime: null
+            }), window.MotionHandoffAnimation = Y, window.MotionHasOptimisedAnimation = (i, s) => {
+                if (!i)
+                    return !1;
+                if (!s)
+                    return v.has(i);
+                let p = b(i, s);
+                return !!w.get(p)
+            }, window.MotionHandoffMarkAsComplete = i => {
+                v.has(i) && v.set(i, !0)
+            }, window.MotionHandoffIsComplete = i => v.get(i) === !0, window.MotionCancelOptimisedAnimation = (i, s, p, c) => {
+                let u = b(i, s),
+                    l = w.get(u);
+                l && (p && c === void 0 ? p.postRender(() => {
+                    p.postRender(() => {
+                        l.animation.cancel()
+                    })
+                }) : l.animation.cancel(), p && c ? (j.add(l), p.render(Xe)) : (w.delete(u), w.size || (window.MotionCancelOptimisedAnimation = void 0)))
+            }, window.MotionCheckAppearSync = (i, s, p) => {
+                var c,
+                    u;
+                let l = ue(i);
+                if (!l)
+                    return;
+                let d = (c = window.MotionHasOptimisedAnimation) === null || c === void 0 ? void 0 : c.call(window, l, s),
+                    g = (u = i.props.values) === null || u === void 0 ? void 0 : u[s];
+                if (!d || !g)
+                    return;
+                let y = p.on("change", M => {
+                    var h;
+                    g.get() !== M && ((h = window.MotionCancelOptimisedAnimation) === null || h === void 0 || h.call(window, l, s), y())
+                });
+                return y
+            });
+            let m = () => {
+                O.cancel();
+                let i = F(e, t, n, o);
+                V === void 0 && (V = performance.now()),
+                i.startTime = V,
+                w.set(a, {
+                    animation: i,
+                    startTime: V
+                }),
+                f && f(i)
+            };
+            v.set(r, !1),
+            O.ready ? O.ready.then(m).catch(E) : m()
+        }
+        var G = ["transformPerspective", "x", "y", "z", "translateX", "translateY", "translateZ", "scale", "scaleX", "scaleY", "rotate", "rotateX", "rotateY", "rotateZ", "skew", "skewX", "skewY"],
+            Ye = {
+                x: "translateX",
+                y: "translateY",
+                z: "translateZ",
+                transformPerspective: "perspective"
+            },
+            je = {
+                translateX: "px",
+                translateY: "px",
+                translateZ: "px",
+                x: "px",
+                y: "px",
+                z: "px",
+                perspective: "px",
+                transformPerspective: "px",
+                rotate: "deg",
+                rotateX: "deg",
+                rotateY: "deg"
+            };
+        function le(e, t) {
+            let n = je[e];
+            return !n || typeof t == "string" && t.endsWith(n) ? t : `${t}${n}`
+        }
+        function _(e) {
+            return G.includes(e)
+        }
+        var Ne = (e, t) => G.indexOf(e) - G.indexOf(t);
+        function de({transform: e, transformKeys: t}, n) {
+            let o = {},
+                f = !0,
+                r = "";
+            t.sort(Ne);
+            for (let a of t) {
+                let m = e[a],
+                    i = !0;
+                typeof m == "number" ? i = m === (a.startsWith("scale") ? 1 : 0) : i = parseFloat(m) === 0,
+                i || (f = !1, r += `${Ye[a] || a}(${e[a]}) `),
+                n && (o[a] = e[a])
+            }
+            return r = r.trim(), n ? r = n(o, r) : f && (r = "none"), r
+        }
+        function Z(e, t) {
+            let n = new Set(Object.keys(e));
+            for (let o in t)
+                n.add(o);
+            return Array.from(n)
+        }
+        function q(e, t) {
+            let n = t - e.length;
+            if (n <= 0)
+                return e;
+            let o = new Array(n).fill(e[e.length - 1]);
+            return e.concat(o)
+        }
+        function I(e) {
+            return e * 1e3
+        }
+        var ye = {
+                duration: .001
+            },
+            $ = {
+                opacity: 1,
+                scale: 1,
+                translateX: 0,
+                translateY: 0,
+                translateZ: 0,
+                x: 0,
+                y: 0,
+                z: 0,
+                rotate: 0,
+                rotateX: 0,
+                rotateY: 0
+            };
+        function Ae(e, t, n, o, f) {
+            return n.delay && (n.delay = I(n.delay)), n.type === "spring" ? _e(e, t, n, o, f) : qe(e, t, n, o, f)
+        }
+        function Ge(e, t, n) {
+            let o = {},
+                f = 0,
+                r = 0;
+            for (let a of Z(e, t)) {
+                let m = e[a] ?? $[a],
+                    i = t[a] ?? $[a];
+                if (m === void 0 || i === void 0 || a !== "transformPerspective" && m === i)
+                    continue;
+                a === "transformPerspective" && (o[a] = [m, i]);
+                let s = Je(m, i, n),
+                    {duration: p, keyframes: c} = s;
+                p === void 0 || c === void 0 || (p > f && (f = p, r = c.length), o[a] = c)
+            }
+            return {
+                keyframeValuesByProps: o,
+                longestDuration: f,
+                longestLength: r
+            }
+        }
+        function _e(e, t, n, o, f) {
+            let r = {},
+                {keyframeValuesByProps: a, longestDuration: m, longestLength: i} = Ge(e, t, n);
+            if (!i)
+                return r;
+            let s = {
+                    ease: "linear",
+                    duration: m,
+                    delay: n.delay
+                },
+                p = f ? ye : s,
+                c = {};
+            for (let [l, d] of Object.entries(a))
+                _(l) ? c[l] = q(d, i) : r[l] = {
+                    keyframes: q(d, i),
+                    options: l === "opacity" ? s : p
+                };
+            let u = we(c, o);
+            return u && (r.transform = {
+                keyframes: u,
+                options: p
+            }), r
+        }
+        function Ze(e) {
+            let {type: t, duration: n, ...o} = e;
+            return {
+                duration: I(n),
+                ...o
+            }
+        }
+        function qe(e, t, n, o, f) {
+            let r = Ze(n);
+            if (!r)
+                return;
+            let a = {},
+                m = f ? ye : r,
+                i = {};
+            for (let p of Z(e, t)) {
+                let c = e[p] ?? $[p],
+                    u = t[p] ?? $[p];
+                c === void 0 || u === void 0 || p !== "transformPerspective" && c === u || (_(p) ? i[p] = [c, u] : a[p] = {
+                    keyframes: [c, u],
+                    options: p === "opacity" ? r : m
+                })
+            }
+            let s = we(i, o);
+            return s && (a.transform = {
+                keyframes: s,
+                options: m
+            }), a
+        }
+        var We = ["duration", "bounce"],
+            He = ["stiffness", "damping", "mass"];
+        function he(e) {
+            return He.some(t => t in e) ? !1 : We.some(t => t in e)
+        }
+        function Ue(e, t, n) {
+            return he(n) ? `${e}-${t}-${n.duration}-${n.bounce}` : `${e}-${t}-${n.damping}-${n.stiffness}-${n.mass}`
+        }
+        function Qe(e) {
+            return he(e) ? {
+                ...e,
+                duration: I(e.duration)
+            } : e
+        }
+        var xe = new Map,
+            ge = 10;
+        function Je(e, t, n) {
+            let o = Ue(e, t, n),
+                f = xe.get(o);
+            if (f)
+                return f;
+            let r = [e, t],
+                a = P({
+                    ...Qe(n),
+                    keyframes: r
+                }),
+                m = {
+                    done: !1,
+                    value: r[0]
+                },
+                i = [],
+                s = 0;
+            for (; !m.done && s < I(10);)
+                m = a.next(s),
+                i.push(m.value),
+                s += ge;
+            r = i;
+            let p = s - ge,
+                u = {
+                    keyframes: r,
+                    duration: p,
+                    ease: "linear"
+                };
+            return xe.set(o, u), u
+        }
+        function we(e, t) {
+            let n = [],
+                o=Object.values(e)[0]?.length;
+            if (!o)
+                return;
+            let f = Object.keys(e);
+            for (let r = 0; r < o; r++) {
+                let a = {};
+                for (let [i, s] of Object.entries(e)) {
+                    let p = s[r];
+                    p !== void 0 && (a[i] = le(i, p))
+                }
+                let m = de({
+                    transform: a,
+                    transformKeys: f
+                }, t);
+                n.push(m)
+            }
+            return n
+        }
+        function et(e, t) {
+            if (!t)
+                for (let n in e) {
+                    let o = e[n];
+                    return o?.legacy === !0 ? o : void 0
+                }
+        }
+        function Me(e, t, n, o, f, r) {
+            for (let [a, m] of Object.entries(e)) {
+                let i = r ? m[r] : void 0;
+                if (i === null || !i && m.default === null)
+                    continue;
+                let s = i ?? m.default ?? et(m, r);
+                if (!s)
+                    continue;
+                let {initial: p, animate: c, transformTemplate: u} = s;
+                if (!p || !c)
+                    continue;
+                let {transition: l, ...d} = c,
+                    g = Ae(p, d, l, tt(u, o), f);
+                if (!g)
+                    continue;
+                let y = {},
+                    M = {};
+                for (let [x, A] of Object.entries(g))
+                    y[x] = A.keyframes,
+                    M[x] = A.options;
+                let h = r ? `:not(.hidden-${r}) ` : "";
+                t(`${h}[${n}="${a}"]`, y, M)
+            }
+        }
+        function tt(e, t) {
+            if (!(!e || !t))
+                return (n, o) => e.replace(t, o)
+        }
+        function Te(e) {
+            return e?e.find(n => n.mediaQuery ? window.matchMedia(n.mediaQuery).matches === !0 : !1)?.hash : void 0
+        }
+        return De(nt);
+    })();
+    </script><script type="framer/appear" id="__framer__appearAnimationsContent">{"1ca28wi":{"default":{"initial":{"opacity":0.001,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"x":0,"y":150},"animate":{"opacity":1,"rotate":0,"rotateX":0,"rotateY":0,"scale":1,"skewX":0,"skewY":0,"transition":{"bounce":0,"delay":0.5,"duration":2,"type":"spring"},"x":0,"y":0}}}}</script><script type="framer/appear" id="__framer__breakpoints">
+    [{
+        "hash": "15kb6vz",
+        "mediaQuery": "(min-width: 1200px)"
+    }, {
+        "hash": "jefiul",
+        "mediaQuery": "(min-width: 810px) and (max-width: 1199px)"
+    }, {
+        "hash": "uyibg",
+        "mediaQuery": "(max-width: 809px)"
+    }]
+    </script><script data-framer-appear-animation="no-preference">
+    (() => {
+        function s(r, n, t) {
+            window.__framer_disable_appear_effects_optimization__ || typeof animator > "u" || requestAnimationFrame(() => {
+                performance.mark("framer-appear-start"),
+                animator.animateAppearEffects(JSON.parse(window.__framer__appearAnimationsContent.text), (i, o, p) => {
+                    let e = document.querySelector(i);
+                    if (e)
+                        for (let [a, m] of Object.entries(o))
+                            animator.startOptimizedAppearAnimation(e, a, m, p[a])
+                }, r, n, t && window.matchMedia("(prefers-reduced-motion:reduce)").matches === !0, animator.getActiveVariantHash(JSON.parse(window.__framer__breakpoints.text))),
+                performance.mark("framer-appear-end"),
+                performance.measure("framer-appear", "framer-appear-start", "framer-appear-end")
+            })
+        }
+        return s
+    })()("data-framer-appear-id", "__Appear_Animation_Transform__", false)
+    </script><script type="module" async data-framer-bundle="main" fetchpriority="low" src="https://framerusercontent.com/sites/3E60dAazAsWbsLfuQMS7fs/script_main.ZFDGE7R4.mjs"></script><div id="svg-templates" aria-hidden="true"></div><!-- Start of bodyEnd --><!-- End of bodyEnd --></body>
 </html>
